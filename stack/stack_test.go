@@ -13,14 +13,14 @@ func TestNew(t *testing.T) {
 	assert.True(t, s.IsEmpty())
 }
 
-func Test_Push_IsNotEmpty(t *testing.T) {
+func TestPushIsNotEmpty(t *testing.T) {
 	s := stack.New()
 	s.Push(1)
 	assert.False(t, s.IsEmpty())
 	assert.Equal(t, 1, s.GetSize())
 }
 
-func Test_Push_Pop_isEmpty(t *testing.T) {
+func TestPushPopisEmpty(t *testing.T) {
 	s := stack.New()
 	s.Push(1)
 	s.Pop()
@@ -28,21 +28,21 @@ func Test_Push_Pop_isEmpty(t *testing.T) {
 	assert.Equal(t, 0, s.GetSize())
 }
 
-func Test_Push_GetSize_IsTwo(t *testing.T) {
+func TestPushGetSizeIsTwo(t *testing.T) {
 	s := stack.New()
 	s.Push(0)
 	s.Push(0)
 	assert.Equal(t, 2, s.GetSize())
 }
 
-func Test_Pop_UnderflowError(t *testing.T) {
+func TestPopUnderflowError(t *testing.T) {
 	s := stack.New()
 	_, err := s.Pop()
 
 	assert.Error(t, err)
 }
 
-func Test_Push_X_Pop_X(t *testing.T) {
+func TestPushXPopX(t *testing.T) {
 	s := stack.New()
 
 	s.Push(99)
@@ -54,7 +54,7 @@ func Test_Push_X_Pop_X(t *testing.T) {
 	assert.Equal(t, 88, element)
 }
 
-func Test_Push_XY_Pop_YX(t *testing.T) {
+func TestPushXYPopYX(t *testing.T) {
 	s := stack.New()
 
 	s.Push(99)
