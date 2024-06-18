@@ -1,4 +1,4 @@
-module raphaelrossi.io/examples
+module github.com/RaphaelVRossi/golang-stack-tdd
 
 go 1.22.2
 
