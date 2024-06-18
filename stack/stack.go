@@ -1,4 +1,4 @@
-package golang_stack_tdd
+package stack
 
 type Stack struct {
 	empty    bool
@@ -12,7 +12,7 @@ func (u *UnderflowError) Error() string {
 	return "can not pop a empty stack"
 }
 
-func NewStack() *Stack {
+func New() *Stack {
 	return &Stack{size: 0, elements: make([]int, 10)}
 }
 
